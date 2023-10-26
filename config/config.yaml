@@ -9,3 +9,11 @@ data_ingestion:
       https://imarticus-skillenza-uploads.s3.ap-south-1.amazonaws.com/files/3d894ad2-c5c9-46c8-bab0-febc36457715/sample_submission.csv,
     ]
   data_dir: ["train", "test", "submission"]
+
+data_validation:
+  root_dir: artifacts/data_validation
+  STATUS_FILE: artifacts/data_validation/status.txt
+  dir_names: ["train", "test", "submission"]
+
+eda:
+  root_dir: artifacts/data_ingestion

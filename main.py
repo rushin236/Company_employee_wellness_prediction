@@ -1,5 +1,5 @@
 from empWellness.logging import logger
-from empWellness.pipeline.state_01_data_ingestion_pipeline import DataIngestionPipeline
+from empWellness.pipeline.state_01_data_ingestion import DataIngestionPipeline
 
 STAGE_NAME = "Data Ingestion Stage"
 try:

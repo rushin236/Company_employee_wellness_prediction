@@ -1,7 +1,7 @@
 import requests
 
 from empWellness.constants import *
-from empWellness.entity import DataIngestionConfig
+from empWellness.entity import DataIngestionConfig, DataValidationConfig
 from empWellness.utils.common import create_directries, read_yaml
 
 
@@ -24,3 +24,14 @@ class ConfigurationManager:
         )
 
         return data_ingestion_config
+
+    def get_data_validation_config(self) -> DataValidationConfig:
+        config = self.config.data_validation
+
+        data_validation_config = DataValidationConfig(
+            root_dir=config.root_dir,
+            STATUS_FILE=config.STATUS_FILE,
+            dir_names=config.dir_names,
+        )
+
+        return data_validation_config

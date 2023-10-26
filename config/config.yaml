@@ -1,0 +1,11 @@
+artifacts_root: artifacts
+
+data_ingestion:
+  root_dir: artifacts/data_ingestion
+  source_URL:
+    [
+      https://imarticus-skillenza-uploads.s3.ap-south-1.amazonaws.com/files/0164f91a-020b-47c3-8705-df2e9dbfb87d/employee_train.csv,
+      https://imarticus-skillenza-uploads.s3.ap-south-1.amazonaws.com/files/a8e5db04-8434-4862-9faa-5f65bf1e3c54/employee_test.csv,
+      https://imarticus-skillenza-uploads.s3.ap-south-1.amazonaws.com/files/3d894ad2-c5c9-46c8-bab0-febc36457715/sample_submission.csv,
+    ]
+  data_dir: ["train", "test", "submission"]

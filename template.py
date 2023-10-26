@@ -9,6 +9,7 @@ PROJECT_NAME = "empWellness"
 list_of_file = [
     ".github/workflow/.gitkeep",
     f"src/{PROJECT_NAME}/__init__.py",
+    f"src/{PROJECT_NAME}/constants/__init__.py",
     f"src/{PROJECT_NAME}/logging/__init__.py",
     f"src/{PROJECT_NAME}/utils/__init__.py",
     f"src/{PROJECT_NAME}/utils/common.py",
@@ -24,6 +25,8 @@ list_of_file = [
     "requirements.txt",
     "setup.py",
     "params.yaml",
+    "main.py",
+    "app.py",
 ]
 
 

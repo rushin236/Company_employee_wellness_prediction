@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as f:
 
 __version__ = "0.0.1"
 
-REPO_NAME = "xyz_employee_welness"
+REPO_NAME = "Employee_Wellness"
 AUTHOR_USER_NAME = "rushin236"
 SRC_REPO = "empWellness"
 AUTH_EMAIL = "rushikeshshindesandesh@gmail.com"
@@ -15,7 +15,7 @@ setuptools.setup(
     version=__version__,
     author=AUTHOR_USER_NAME,
     author_email=AUTH_EMAIL,
-    description="A small python package for NLP app",
+    description="A small project for employee wellness prediction",
     long_description=long_description,
     long_description_content="text/markdown",
     url=f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}",

@@ -2,17 +2,21 @@ import requests
 
 from empWellness.constants import *
 from empWellness.entity import DataIngestionConfig, DataValidationConfig
-from empWellness.utils.common import create_directries, read_yaml
+from empWellness.utils.common import create_directories, read_yaml
+
+try:
+    x = 1
+    print(x)
+except Exception as e:
+    raise e
 
 
 class ConfigurationManager:
-    def __init__(
-        self, config_filepath=CONFIG_FILE_PATH, params_filepath=PARAMS_FILE_PATH
-    ) -> None:
+    def __init__(self, config_filepath=CONFIG_FILE_PATH, params_filepath=PARAMS_FILE_PATH) -> None:
         self.config = read_yaml(config_filepath)
         self.params = read_yaml(params_filepath)
 
-        create_directries([self.config.artifacts_root])
+        create_directories([self.config.artifacts_root])
 
     def get_data_ingestion_config(self) -> DataIngestionConfig:
         config = self.config.data_ingestion

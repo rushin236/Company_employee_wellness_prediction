@@ -1,7 +1,7 @@
 import os
 
-from empWellness.config.configration import DataValidationConfig
-from empWellness.utils.common import create_directries
+from empWellness.config.configuration import DataValidationConfig
+from empWellness.utils.common import create_directories
 
 
 class DataValidation:
@@ -9,7 +9,7 @@ class DataValidation:
         self.config = config
 
     def validate(self):
-        create_directries([self.config.root_dir])
+        create_directories([self.config.root_dir])
 
         dir_list = os.listdir(self.config.root_dir)
 

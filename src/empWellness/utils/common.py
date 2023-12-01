@@ -31,8 +31,8 @@ def read_yaml(yaml_file_path: Path) -> ConfigBox:
 
 
 @ensure_annotations
-def create_directries(list_of_path: list, verbose: bool = True):
-    """This function creates directorise in list
+def create_directories(list_of_path: list, verbose: bool = True):
+    """This function creates directories in list
 
     Args:
         list_of_path (list): list of path

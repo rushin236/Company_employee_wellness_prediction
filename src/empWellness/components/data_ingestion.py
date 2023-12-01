@@ -4,7 +4,7 @@ import requests
 
 from empWellness.entity import DataIngestionConfig
 from empWellness.logging import logger
-from empWellness.utils.common import create_directries
+from empWellness.utils.common import create_directories
 
 
 class DataIngestion:
@@ -15,26 +15,20 @@ class DataIngestion:
         try:
             logger.info("Ingestion started!")
 
-            create_directries([self.config.root_dir])
+            create_directories([self.config.root_dir])
 
             file_name = ["train.csv", "test.csv", "submission.csv"]
 
             for i in range(len(self.config.source_URL)):
-                file_path = os.path.join(
-                    self.config.root_dir, self.config.data_dir[i], file_name[i]
-                )
+                file_path = os.path.join(self.config.root_dir, self.config.data_dir[i], file_name[i])
 
                 if not os.path.exists(file_path):
-                    file_dir = os.path.join(
-                        self.config.root_dir, self.config.data_dir[i]
-                    )
-                    create_directries([file_dir])
-                    logger.info(f"created dirctory: {file_dir[i]} for {file_name[i]}")
+                    file_dir = os.path.join(self.config.root_dir, self.config.data_dir[i])
+                    create_directories([file_dir])
+                    logger.info(f"created directory: {file_dir[i]} for {file_name[i]}")
 
                     response = requests.get(self.config.source_URL[i])
-                    raw_data = response.content.decode(
-                        encoding="utf-8", errors="ignore"
-                    )
+                    raw_data = response.content.decode(encoding="utf-8", errors="ignore")
                     logger.info(f"File: {file_name[i]} downloaded!")
 
                     with open(file_path, "w") as f:
@@ -46,3 +40,7 @@ class DataIngestion:
 
         except Exception as e:
             raise e
+
+
+if __name__ == "__main__":
+    x = 1

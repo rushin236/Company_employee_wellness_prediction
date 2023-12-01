@@ -1,5 +1,5 @@
 from empWellness.components.data_ingestion import DataIngestion
-from empWellness.config.configration import ConfigurationManager
+from empWellness.config.configuration import ConfigurationManager
 
 
 class DataIngestionPipeline:
